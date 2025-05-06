@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "e348ded8-ed38-41d4-9798-bbd670e1f03e",
+		"name": "TestReactiveNequi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32768006"
+	},
+	"item": [
+		{
+			"name": "1.Crear una franquicia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Mi Franquicia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\n  http://localhost:8080/api/reactive/franquicias \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"nombre\": \"Mi Franquicia\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "2.Obtener todas las franquicias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:8080/api/franquicias"
+			},
+			"response": []
+		},
+		{
+			"name": "3.Obtener franquicia por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/681948ff4bcead3593ba161a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"681948ff4bcead3593ba161a"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:8080/api/franquicias/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "4.Actualizar franquicia",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Franquicia Actualizada\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/681948ff4bcead3593ba161a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"681948ff4bcead3593ba161a"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT \\\r\n  http://localhost:8080/api/franquicias/{id} \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nombre\": \"Franquicia Actualizada\"\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "5.Eliminar franquicia",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/681948ff4bcead3593ba161a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"681948ff4bcead3593ba161a"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/franquicias/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "6.Agregar sucursal a franquicia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Sucursal Centro\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\r\n  http://localhost:8080/api/franquicias/{franquiciaId}/sucursales \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nombre\": \"Sucursal Centro\"\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "7.Eliminar sucursal de franquicia",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/2f66bffc-212f-45c1-aca8-33f5d4680f48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"2f66bffc-212f-45c1-aca8-33f5d4680f48"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/franquicias/{franquiciaId}/sucursales/{sucursalId}"
+			},
+			"response": []
+		},
+		{
+			"name": "8.Agregar producto a sucursal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Producto 1\",\r\n    \"stock\": 50\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/61913e27-65cb-4ed9-ad3f-23b260b0c7ea/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"61913e27-65cb-4ed9-ad3f-23b260b0c7ea",
+						"productos"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\r\n  http://localhost:8080/api/franquicias/{franquiciaId}/sucursales/{sucursalId}/productos \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nombre\": \"Producto 1\",\r\n    \"stock\": 50\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "9.Eliminar producto de sucursal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/61913e27-65cb-4ed9-ad3f-23b260b0c7ea/productos/f16070f4-dbe1-4ebe-bcdc-9c3aaf53a84b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"61913e27-65cb-4ed9-ad3f-23b260b0c7ea",
+						"productos",
+						"f16070f4-dbe1-4ebe-bcdc-9c3aaf53a84b"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/franquicias/{franquiciaId}/sucursales/{sucursalId}/productos/{productoId}"
+			},
+			"response": []
+		},
+		{
+			"name": "10.Actualizar stock de producto",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nuevoStock\": 100\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/61913e27-65cb-4ed9-ad3f-23b260b0c7ea/productos/517a97be-84bb-4aec-b08e-9fd73b73776c/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"61913e27-65cb-4ed9-ad3f-23b260b0c7ea",
+						"productos",
+						"517a97be-84bb-4aec-b08e-9fd73b73776c",
+						"stock"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH \\\r\n  http://localhost:8080/api/franquicias/{franquiciaId}/sucursales/{sucursalId}/productos/{productoId}/stock \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nuevoStock\": 100\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "11.Actualizar nombre de franquicia",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nuevoNombre\": \"Nuevo Nombre Franquicia\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"nombre"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH \\\r\n  http://localhost:8080/api/reactive/franquicias/{id}/nombre \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nuevoNombre\": \"Nuevo Nombre Franquicia\"\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "12.Actualizar nombre de sucursal",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nuevoNombre\": \"Nuevo Nombre Sucursal\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/61913e27-65cb-4ed9-ad3f-23b260b0c7ea/nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"61913e27-65cb-4ed9-ad3f-23b260b0c7ea",
+						"nombre"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH \\\r\n  http://localhost:8080/api/reactive/franquicias/{franquiciaId}/sucursales/{sucursalId}/nombre \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nuevoNombre\": \"Nuevo Nombre Sucursal\"\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "13.Actualizar nombre de producto",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nuevoNombre\": \"Nuevo Nombre Producto\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/sucursales/61913e27-65cb-4ed9-ad3f-23b260b0c7ea/productos/517a97be-84bb-4aec-b08e-9fd73b73776c/nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"sucursales",
+						"61913e27-65cb-4ed9-ad3f-23b260b0c7ea",
+						"productos",
+						"517a97be-84bb-4aec-b08e-9fd73b73776c",
+						"nombre"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH \\\r\n  http://localhost:8080/api/reactive/franquicias/{franquiciaId}/sucursales/{sucursalId}/productos/{productoId}/nombre \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"nuevoNombre\": \"Nuevo Nombre Producto\"\r\n  }'"
+			},
+			"response": []
+		},
+		{
+			"name": "14.Obtener productos con más stock por sucursal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reactive/franquicias/6819640f3da0f2340ca7da19/productos/mas-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reactive",
+						"franquicias",
+						"6819640f3da0f2340ca7da19",
+						"productos",
+						"mas-stock"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:8080/api/reactive/franquicias/{franquiciaId}/productos/mas-stock"
+			},
+			"response": []
+		}
+	]
+}
