@@ -248,4 +248,4 @@ Este proyecto está licenciado bajo la licencia MIT.
 
 ## Autor
 
-Desarrollado por [Tu Nombre] para la prueba técnica de Nequi.
+Desarrollado por José Armando Son Rojas para la prueba técnica de Nequi.
